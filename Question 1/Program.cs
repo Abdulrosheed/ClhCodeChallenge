@@ -11,8 +11,8 @@ namespace Question_1
         }
         static void CollectNumbers ()
         {
-            
-            int check =0;
+            List <int> numbers1 = new List<int>();
+           
            int count = 0;
             Console.WriteLine("How many numbers did you want to enter");
             int size = int.Parse(Console.ReadLine());
@@ -35,27 +35,27 @@ namespace Question_1
             for(int j = 0; j < numbers.Length ; j++)
             {
                
-                if(numbers[j] == number && count == 0)
+                if(numbers[j] == number )
                 {
                     
                     
-                    Console.Write(j);
+                    numbers1.Add(j);
                     count++;
                     
                     
                 }
-                if(numbers[j] == number)
-                {
-                    check = j;
-                   if(j == numbers.Length - 1)
-                   {
-                        Console.WriteLine($"  , {check}");
-                    }
-                }
+            
                 
                 
     
             }
+            if(count > 0)
+            {
+                Console.Write($"{numbers1[0]} , {numbers1[Math.Abs(numbers1.Count - 1) ]} ");
+            }
+                
+   
+                
             if(count <= 0)
             {
                 Console.WriteLine("-1 , -1");

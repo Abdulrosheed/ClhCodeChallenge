@@ -8,54 +8,53 @@ namespace Question3
         {
             Console.WriteLine("Enter your word");
             string word = Console.ReadLine();
-            string reset = "";
-            string reset2 = "";
+            string reset = " ";
+            string reset2 = " ";
             int count = 0;
-            int count2 = 0;
             int min = 0;
-            foreach(var item in word)
+            for(int i = 0; i < word.Length ; i++)
             {
-                count++;
-                for(int k = 0; k < count ; k++)
+                reset += word[i];
+                for(int j = i +1 ; j < word.Length ; j++)
                 {
-                    reset += item;
-                    if(count > 1)
+                    reset += word[j];
+                    for(int k = 0 , h = 1; h > i  ; k++)
                     {
-                    
-                        for(int i = 0; i < reset.Length; i++)
+                        if(reset[k] == reset[(reset.Length)/2])
                         {
-                            if(reset[i] == reset[reset.Length - i - 1])
+                            break; 
+                        }
+                        else if(reset[k] == reset[reset.Length - 1 - k])
+                        {
+                            
+                            count++;
+                        }
+                        if(reset[k] == reset[(reset.Length)/2])
+
+                        h++;
+
+                    }
+                    if(count == reset.Length-1)
+                    {
+                        for(int m = 0 ; m <= 1 ; m++)
+                        {
+                            if(m == 0)
                             {
+                                reset2 = reset;
+                            }
+                            if(m > 0 && count >= min)
+                            {
+                                min = count;
+                                reset2 = reset;
                                 
-                                count2++;
                             }
                         }
-                        foreach(var character in reset )
-                        {
-                            if(count2 == reset.Length)
-                            {
-                                reset2 += character; 
-                            }
-                          
-                        }
-                            
-                        for (int j = 1; j > 0 ; j++ )
-                        {
-                            if(j == 1)
-                            {
-                                min = count2;
-                            }
-                            if(j > 1 && count2 <= min )
-                            {
-                                Console.WriteLine(reset2);
-                                break;
-                            }
-                            
-                        }
+                    }
                 }
-                }
-                
+                reset = " ";
+                count = 0;
             }
+            Console.WriteLine(reset2);
             
         }
     }
