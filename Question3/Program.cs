@@ -8,53 +8,40 @@ namespace Question3
         {
             Console.WriteLine("Enter your word");
             string word = Console.ReadLine();
-            string reset = " ";
-            string reset2 = " ";
-            int count = 0;
+            string reset = "";
+            string reset2 = "";
             int min = 0;
-            for(int i = 0; i < word.Length ; i++)
+            int count = 0;
+            for(int i = 0; i < word.Length; i++)
             {
-                reset += word[i];
-                for(int j = i +1 ; j < word.Length ; j++)
+                
+                for(int j =i; j < word.Length; j++)
                 {
+                    
                     reset += word[j];
-                    for(int k = 0 , h = 1; h > i  ; k++)
+                    for(int k = 0; k < reset.Length; k++)
                     {
-                        if(reset[k] == reset[(reset.Length)/2])
+                        if (reset[k] == reset[reset.Length - k -1])
                         {
-                            break; 
-                        }
-                        else if(reset[k] == reset[reset.Length - 1 - k])
-                        {
-                            
                             count++;
                         }
-                        if(reset[k] == reset[(reset.Length)/2])
-
-                        h++;
-
+                        
                     }
-                    if(count == reset.Length-1)
+                    if (count  == reset.Length && count > min)
                     {
-                        for(int m = 0 ; m <= 1 ; m++)
-                        {
-                            if(m == 0)
-                            {
-                                reset2 = reset;
-                            }
-                            if(m > 0 && count >= min)
-                            {
-                                min = count;
-                                reset2 = reset;
-                                
-                            }
-                        }
+                        reset2 = reset;
+                    
+                        min = count;
                     }
+                    count = 0;
+                 
+                
                 }
-                reset = " ";
-                count = 0;
+                   reset = "";
             }
             Console.WriteLine(reset2);
+        
+
             
         }
     }
