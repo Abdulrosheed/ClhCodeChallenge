@@ -7,7 +7,7 @@ namespace Question1
     {
         static void Main(string[] args)
         {
-           int []? numbers = {1,1,1,2,2,3};
+           int [] numbers = {1,1,1,2,2,3};
            RemoveDuplicateNumbers(numbers);
             
         }
