@@ -6,13 +6,14 @@ namespace Question2
     {
         static void Main(string[] args)
         {
-            int [] numbers = {1,1,1};
+            int [] numbers = {1,1,1,1,4,2};
             FindLongestHarmoniousArray(numbers);
         }
            public static void FindLongestHarmoniousArray (int [] numbers)
         {
             int count = 0;
             int max = 0;
+            int m = 0;
 
             for (int i = 0; i < numbers.Length; i++)
             {
@@ -20,6 +21,7 @@ namespace Question2
                 {
                     if(numbers[i] - numbers[j] == 1 )
                     {
+                        m = 1;
                         count++;
                     }
                     if(numbers[j] == numbers[i])
@@ -34,7 +36,7 @@ namespace Question2
                 }
                 count = 0;
             }
-            if(max == numbers.Length)
+            if(max == numbers.Length || m == 0)
             {
                 Console.WriteLine(0);
             }
