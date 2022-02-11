@@ -6,7 +6,7 @@ namespace Question1
     {
         static void Main(string[] args)
         {
-            CheckIfItContainsPermutation("abc" , "babcdfera");
+            CheckIfItContainsPermutation("aabc" , "babcdcabafera");
         }
         static void CheckIfItContainsPermutation(string s1 , string s2)
         {
@@ -32,14 +32,20 @@ namespace Question1
                     arr[j] = arr[j+1];
                     arr[j+1] = char.Parse(x);
                     string m = new string(arr);
+                    
                 
-                    isSucess = Check(m ,s2, factorial);
+                   isSucess = Check(m ,s2, factorial);
+                   if(isSucess)
+                   {
+                       break;
+                   }
             
                     
                 
                 }
                 if(isSucess)
                 {
+                
                     l = 1;
                     break;
                 
@@ -62,6 +68,7 @@ namespace Question1
                 for (int j = 0; j < s2.Length - length; j++)
                 {
                    var x = s2.Substring(j , length);
+        
                    for (int m = x.Length-1 ; m >= 0 ; m--)
                    {
                        checker += x[m];
