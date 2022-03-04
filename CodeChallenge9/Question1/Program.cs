@@ -6,7 +6,7 @@ namespace Question1
     {
         static void Main(string[] args)
         {
-            string [] words = {"efghtyyvgm" , "Jhnhavnnnx" , "Bukller" ,"muyt" , "hgdf"};
+            string [] words = {"efghtyyvgm" , "ac", "nv" , "Jhnhavnnnx" , "Bukller" ,"muybt" , "hgdf"};
             CheckWords(words);
         }
         static  void CheckWords(string [] words)

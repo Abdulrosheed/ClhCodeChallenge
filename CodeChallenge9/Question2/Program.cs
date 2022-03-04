@@ -6,15 +6,20 @@ namespace Question2
     {
         static void Main(string[] args)
         {
-            CheckPassWord("ayurteyegvhdb");
+            CheckPassWord("aayurtt2Zeyegvhdb1");
         }
         static  void CheckPassWord (string s)
         {
             string a = "";
             int count = 0;
-            int count2 = 0;
+            bool checker1 = false;
+            bool checker2 = false;
+            bool checker3 = false;
             int g = 0;
+
+        
             int value = 0;
+             string x = "abcdefghijklmnopqrstuvwxyz";
            
             if( s.Length > 5 && s.Length <= 20)
             {
@@ -23,28 +28,39 @@ namespace Question2
             }
             for(int i = 0; i < s.Length; i++)
             {
-                
-                if(s[i].ToString() == s[i].ToString().ToLower() && s[i].ToString() == s[i].ToString().ToUpper() && int.TryParse(s[i].ToString() , out value))
+              
+                if((s[i].ToString() == s[i].ToString().ToLower() && x.Contains(s[i].ToString().ToLower())))
                 {
-                    count++;
-                    count++;
-                    count++;
+                   checker1 = true;
+                   
                 }
-                foreach(var item in s)
+                if(int.TryParse(s[i].ToString() , out value))
                 {
-                    if(a == item.ToString())
-                    {
-                        count2++;
-                    }
-                    if(count2 == 3)
-                    {
-                        g  = 1;
-                    }
+                    checker2 = true;
                 }
+                if((s[i].ToString() == s[i].ToString().ToUpper() && x.Contains(s[i].ToString().ToLower())))
+                {
+                    checker3 = true;
+                }
+                for(int k = 0; k < 3;k++)
+                {
+                    a += s[i];
+                }
+                if(s.Contains(a))
+                {
+                    g = 1;
+                }
+                a = "";
+             
             }
-            if(g == 0)
+           
+            if(g != 1)
             {
                 count++;
+            }
+            if(checker1 && checker2 && checker3)
+            {
+                count = count + 3;
             }
             if(count == 6)
             {
