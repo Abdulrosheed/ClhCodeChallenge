@@ -1,0 +1,15 @@
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\bin\Debug\net6.0\CodeChallengeTEst.exe
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\bin\Debug\net6.0\CodeChallengeTEst.deps.json
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\bin\Debug\net6.0\CodeChallengeTEst.runtimeconfig.json
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\bin\Debug\net6.0\CodeChallengeTEst.dll
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\bin\Debug\net6.0\CodeChallengeTEst.pdb
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.csproj.AssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.AssemblyInfoInputs.cache
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.AssemblyInfo.cs
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.csproj.CoreCompileInputs.cache
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.dll
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\refint\CodeChallengeTEst.dll
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.pdb
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\CodeChallengeTEst.genruntimeconfig.cache
+C:\Users\SAMSUNG\Desktop\CodeChallengeTEst\obj\Debug\net6.0\ref\CodeChallengeTEst.dll
