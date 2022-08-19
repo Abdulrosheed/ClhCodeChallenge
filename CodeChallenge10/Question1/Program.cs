@@ -7,7 +7,7 @@ namespace Question1
     {
         static void Main(string[] args)
         {
-            CheckSherlock("aaaaaaaab");
+            CheckSherlock("aaabhhjkdsd");
         }
         public static void CheckSherlock(string words)
         {
